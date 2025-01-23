@@ -8,7 +8,9 @@ target_sources(
     PUBLIC
         FILE_SET HEADERS
         BASE_DIRS ${PROJECT_SOURCE_DIR}/include
-        FILES ${PROJECT_SOURCE_DIR}/include/beman/elide/elide.hpp
+        FILES
+            ${PROJECT_SOURCE_DIR}/include/beman/elide/deduce.hpp
+            ${PROJECT_SOURCE_DIR}/include/beman/elide/elide.hpp
 )
 
 set_target_properties(beman.elide PROPERTIES VERIFY_INTERFACE_HEADER_SETS ON)
