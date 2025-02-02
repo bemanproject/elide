@@ -22,7 +22,9 @@ within storage managed by `std::optional`, `std::list`, et cetera.
 
 ### Dependencies
 
-This project has no C or C++ dependencies.
+This project has no C or C++ dependencies,
+however,
+it requires **C++20** or above to compile.
 
 Build-time dependencies:
 
