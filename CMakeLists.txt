@@ -2,11 +2,7 @@
 
 cmake_minimum_required(VERSION 3.25)
 
-project(
-    beman.elide
-    DESCRIPTION "Implements proposed std::elide"
-    LANGUAGES CXX
-)
+project(beman.elide DESCRIPTION "Implements proposed std::elide" LANGUAGES CXX)
 
 enable_testing()
 
