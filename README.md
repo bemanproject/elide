@@ -15,7 +15,7 @@ SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 - Wraps an invocable alongside the arguments thereto (by reference), and
 - Implicitly converts to whatever that invocable yields
 
-When combined with emplacement APIs this allows for the creation of instance of immovable types
+When combined with emplacement APIs this allows for the creation of instances of immovable types
 within storage managed by `std::optional`, `std::list`, et cetera.
 
 ## Building beman.elide
