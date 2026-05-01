@@ -17,5 +17,5 @@ target_link_libraries(
 )
 
 include(GoogleTest)
-gtest_discover_tests(beman.elide.tests.elide)
-gtest_discover_tests(beman.elide.tests.deduce)
+gtest_discover_tests(beman.elide.tests.elide DISCOVERY_TIMEOUT 60)
+gtest_discover_tests(beman.elide.tests.deduce DISCOVERY_TIMEOUT 60)

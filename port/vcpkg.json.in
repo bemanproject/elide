@@ -1,0 +1,17 @@
+{
+  "name": "beman-elide",
+  "version-semver": "@VERSION@",
+  "description": "Implements proposed std::elide",
+  "homepage": "https://github.com/bemanproject/elide",
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}
