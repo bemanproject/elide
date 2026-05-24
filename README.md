@@ -4,8 +4,13 @@
 SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 -->
 
-<!-- markdownlint-disable-next-line line-length -->
-![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_under_development.svg) ![Continuous Integration Tests](https://github.com/bemanproject/elide/actions/workflows/ci_tests.yml/badge.svg) ![Lint Check (pre-commit)](https://github.com/bemanproject/elide/actions/workflows/pre-commit-check.yml/badge.svg) [![Coverage](https://coveralls.io/repos/github/bemanproject/elide/badge.svg?branch=main)](https://coveralls.io/github/bemanproject/elide?branch=main) ![Standard Target](https://github.com/bemanproject/beman/blob/main/images/badges/cpp29.svg)
+<!-- markdownlint-disable line-length -->
+[![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_under_development.svg)](https://github.com/bemanproject/beman/blob/main/docs/beman_library_maturity_model.md#the-beman-library-maturity-model)
+[![Continuous Integration Tests](https://github.com/bemanproject/elide/actions/workflows/ci_tests.yml/badge.svg)](https://github.com/bemanproject/elide/actions/workflows/ci_tests.yml)
+[![Lint Check (pre-commit)](https://github.com/bemanproject/elide/actions/workflows/pre-commit-check.yml/badge.svg)](https://github.com/bemanproject/elide/actions/workflows/pre-commit-check.yml)
+[![Coverage](https://coveralls.io/repos/github/bemanproject/elide/badge.svg?branch=main)](https://coveralls.io/github/bemanproject/elide?branch=main)
+![Standard Target](https://github.com/bemanproject/beman/blob/main/images/badges/cpp29.svg)
+<!-- markdownlint-restore -->
 
 **Implements**: `std::elide` proposed in [`std::elide` (P3288R3)](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p3288r3.html).
 
@@ -145,9 +150,3 @@ include an appropriate `beman.elide` header from your source code.
 ```c++
 #include <beman/elide/elide.hpp>
 ```
-
-> [!NOTE]
->
-> `beman.elide` headers are to be included with the `beman/elide/` prefix.
-> Altering include search paths to spell the include target another way (e.g.
-> `#include <elide.hpp>`) is unsupported.
