@@ -16,7 +16,7 @@ SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 `beman.emplace_from` is provides a non-exposition-only version of the emplace-from helper used by [`std::execution`](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p2300r10.html).
 This helper can be used to construct immovable objects via emplace-style APIs by leveraging guaranteed RVO.
 
-**Implements**: `std::emplace_from` and `std::deduce` proposed in P4337R0 and P4338R0, respectively.
+**Implements**: [`std::emplace_from` (P4337R0)](https://isocpp.org/files/papers/P4337R0.pdf) and [`std::deduce` (P4338R0)](https://isocpp.org/files/papers/P4338R0.pdf).
 
 **Status**: [Under development and not yet ready for production use.](https://github.com/bemanproject/beman/blob/main/docs/beman_library_maturity_model.md#under-development-and-not-yet-ready-for-production-use)
 
