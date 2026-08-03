@@ -4,6 +4,14 @@
 # Check documentation for beman-tidy here:
 # https://github.com/bemanproject/beman-tidy/blob/main/README.md
 
-disabled_rules: []
+disabled_rules:
+  # TODO: Enable once P4337R0 and P4338R0 are published and have live WG21 links (see readme.implements).
+  - readme.implements
+  # TODO: Enable once a trunk version is deployed on Compiler Explorer with nightyclone mode (see release.godbolt_trunk_version).
+  - release.godbolt_trunk_version
+  # TODO: Enable once the main library target is built unconditionally by default. The modules toggle currently chooses STATIC vs INTERFACE via conditional add_library.
+  - cmake.default
+  # TODO: Enable once module builds no longer rely on target_compile_features PUBLIC (needs separate design; removing it today breaks module support).
+  - cmake.passive_targets
 ignored_paths:
   - infra/

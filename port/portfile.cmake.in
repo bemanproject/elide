@@ -1,29 +1,38 @@
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO bemanproject/elide
+    REPO bemanproject/emplace_from
     REF "v@VERSION@"
     SHA512 @SHA512@
     HEAD_REF main
 )
 
+vcpkg_check_features(
+    OUT_FEATURE_OPTIONS FEATURE_OPTIONS
+    FEATURES
+        modules   BEMAN_EMPLACE_FROM_USE_MODULES
+)
+
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     OPTIONS
-        -DBEMAN_ELIDE_BUILD_TESTS=OFF
-        -DBEMAN_ELIDE_BUILD_EXAMPLES=OFF
+        ${FEATURE_OPTIONS}
+        -DBEMAN_EMPLACE_FROM_BUILD_TESTS=OFF
+        -DBEMAN_EMPLACE_FROM_BUILD_EXAMPLES=OFF
 )
 
 vcpkg_cmake_install()
 
 vcpkg_cmake_config_fixup(
-    PACKAGE_NAME beman.elide
-    CONFIG_PATH lib/cmake/beman.elide
+    PACKAGE_NAME beman.emplace_from
+    CONFIG_PATH lib/cmake/beman.emplace_from
 )
 
-file(REMOVE_RECURSE
-    "${CURRENT_PACKAGES_DIR}/debug"
-    "${CURRENT_PACKAGES_DIR}/lib"
-)
+if(NOT "modules" IN_LIST FEATURES)
+    file(REMOVE_RECURSE
+        "${CURRENT_PACKAGES_DIR}/debug"
+        "${CURRENT_PACKAGES_DIR}/lib"
+    )
+endif()
 
 vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE")
